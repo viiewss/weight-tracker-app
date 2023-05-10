@@ -1,0 +1,53 @@
+{
+  "name": "calorie-tracker-app",
+  "version": "1.0.0",
+  "description": "calorie tracker app",
+  "main": "server.js",
+  "scripts": {
+    "test": "test",
+    "server": "nodemon server.js",
+    "start": "concurrently \"npm run server\" \"webpack serve --config webpack.config.js\"",
+    "fellows": "concurrently \"nodemon server.js\" \"webpack-dev-server\"",
+    "build": "webpack"
+  },
+  "author": "Mahir Mohtasin",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "bcrpyt": "^2.0.0",
+    "bcrypt": "^5.1.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "chart.js": "^4.3.0",
+    "chartjs-adapter-date-fns": "^3.0.0",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "mongodb": "^5.4.0",
+    "mongoose": "^7.1.0",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^8.0.0",
+    "react": "^18.2.0",
+    "react-chartjs-2": "^5.2.0",
+    "react-dom": "^18.2.0",
+    "react-router": "^6.11.1",
+    "react-router-dom": "^6.11.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.21.8",
+    "@babel/preset-env": "^7.21.5",
+    "@babel/preset-react": "^7.18.6",
+    "babel-loader": "^9.1.2",
+    "clean-webpack-plugin": "^4.0.0",
+    "concurrently": "^8.0.1",
+    "css-loader": "^6.7.3",
+    "html-webpack-plugin": "^5.5.1",
+    "style-loader": "^3.3.2",
+    "webpack": "^5.82.0",
+    "webpack-cli": "^5.1.0",
+    "webpack-dev-server": "^4.15.0"
+  }
+}
