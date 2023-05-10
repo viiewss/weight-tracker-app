@@ -24,7 +24,7 @@ Once you have these dependencies installed, you can follow these steps to instal
 
 ## Usage
 
-To use the weight tracker app, simply add new weight entries as needed by clicking the "Add Weight" button and entering the weight and date/time information.
+To use the weight tracker app, simply add new weight entries as needed by clicking the "Add Weight" button and entering the weight and date/time information.Refreshing the page will allow for the chart to be updated you can view your progress over time. 
 
 
 To ensure the security of user data, the weight tracker app includes an authentication system that requires users to create an account and log in before accessing the app. Users' weight data is stored securely on the server and is only accessible to authenticated users.
