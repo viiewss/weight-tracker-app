@@ -1,12 +1,12 @@
 # Weight Tracker App
 
-This is a simple weight tracker app that allows users to record their weight and track their progress over time. The app also includes #authentication to keep user data secure.
+This is a simple weight tracker app that allows users to record their weight and track their progress over time. The app also includes authentication using to keep user data secure.
 
 ## Features
 
 - Add new weight entries with date and time
-- View a graph of weight entries over time
-- Secure authentication system to protect user data
+- View a graph of weight entries over time(react-chartjs2)
+- Secure authentication system to protect user data(passport.js)
 
 ## Installation
 
