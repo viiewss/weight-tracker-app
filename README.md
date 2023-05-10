@@ -2,6 +2,7 @@ Weight Tracker App
 This is a simple weight tracker app that allows users to record their weight and track their progress over time.
 
 Features
+
 Secure authentication system to protect user data
 Add new weight entries with date and time
 View a graph of weight entries over time
