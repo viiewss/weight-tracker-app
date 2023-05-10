@@ -18,8 +18,8 @@ Once you have these dependencies installed, you can follow these steps to instal
 
 1. Clone the repository or download the ZIP file and extract it.
 2. Open a terminal and navigate to the app directory.
-3. Run the command `npm install` or `yarn install` to install the required packages.
-4. Run the command `npm start` or `yarn start` to start the app.
+3. Run the command `npm install` to install the required packages.
+4. Run the command `npm run start` to start the app.
 5. Open a web browser and go to the URL `http://localhost:3000` to view the app.
 
 ## Usage
