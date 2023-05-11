@@ -10,6 +10,10 @@ body {
   color: #333;
   margin: 0;
   padding: 0;
+  background-image: url('https://i.redd.it/37rsnc0u5w291.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 10px;
 }
 
 .container {
@@ -18,7 +22,7 @@ body {
 }
 
 h1 {
-  color: #333;
+  color: white;
   font-size: 2.5em;
   text-align: center;
   margin-top: 2em;
@@ -120,4 +124,8 @@ form {
   .nav-menu a {
     text-align: center;
   }
+}
+
+p {
+  color: white;
 }

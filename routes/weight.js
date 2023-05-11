@@ -9,4 +9,10 @@ router.post('/entry', isAuthenticated, weightController.addWeightEntry); // Add 
 // Get all weight entries for the current user
 router.get('/entries', isAuthenticated, weightController.getAllWeightEntries); // Add the middleware here
 
+router.delete(
+  '/entry/:id',
+  isAuthenticated,
+  weightController.deleteWeightEntry
+);
+
 module.exports = router;

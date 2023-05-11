@@ -44,7 +44,8 @@ function WeightTrackerPage() {
       });
       const data = await response.json();
       if (response.ok) {
-        setWeights([...weights, { date, weight }]);
+        fetchData();
+        //setWeights((prevWeights) => [...prevWeights, { date, weight }]);
       } else {
         console.error('Error adding weight:', data.message);
       }
@@ -143,6 +144,30 @@ function WeightTrackerPage() {
       titleFontColor: '#fff',
       bodyFontColor: '#fff',
       cornerRadius: 3,
+    },
+    onClick: async (event, elements) => {
+      if (elements.length > 0) {
+        const index = elements[0].index;
+        const weightEntryId = weights[index].id;
+
+        try {
+          const response = await fetch(`/api/weight/entry/${weightEntryId}`, {
+            method: 'DELETE',
+          });
+
+          if (response.ok) {
+            // Remove the deleted weight entry from state.
+            const newWeights = weights.filter(
+              (entry) => entry.id !== weightEntryId
+            );
+            setWeights(newWeights);
+          } else {
+            console.error('Error deleting weight entry');
+          }
+        } catch (error) {
+          console.error('Error deleting weight entry:', error);
+        }
+      }
     },
   };
 

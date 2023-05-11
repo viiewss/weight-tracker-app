@@ -26,11 +26,35 @@ async function getAllWeightEntries(req, res) {
   const { _id } = req.user;
 
   try {
-    const weightEntries = await WeightEntry.find({ user: _id }).sort({
-      date: 1,
-    });
+    let weightEntries = await WeightEntry.find({ user: _id }).sort({ date: 1 });
+
+    // Add the id of each weight entry to the response.
+    weightEntries = weightEntries.map((entry) => ({
+      id: entry._id,
+      date: entry.date,
+      weight: entry.weight,
+    }));
 
     res.json(weightEntries);
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Internal Server Error');
+  }
+}
+
+async function deleteWeightEntry(req, res) {
+  const { _id } = req.user;
+  const { id } = req.params;
+
+  try {
+    const weightEntry = await WeightEntry.findOne({ _id: id, user: _id });
+
+    if (!weightEntry) {
+      return res.status(404).send('Weight entry not found');
+    }
+
+    await weightEntry.deleteOne();
+    res.status(200).send('Weight entry deleted');
   } catch (error) {
     console.error(error);
     res.status(500).send('Internal Server Error');
@@ -40,4 +64,5 @@ async function getAllWeightEntries(req, res) {
 module.exports = {
   addWeightEntry,
   getAllWeightEntries,
+  deleteWeightEntry,
 };
