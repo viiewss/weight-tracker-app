@@ -5,6 +5,7 @@ This is a simple weight tracker app that allows users to record their weight and
 ## Features
 
 - Add new weight entries with date and time
+- Delete weight entries by clicking on the data point
 - View a graph of weight entries over time(react-chartjs2)
 - Secure authentication system to protect user data(passport.js)
 
