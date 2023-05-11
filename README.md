@@ -1,12 +1,12 @@
 # Weight Tracker App
 
-This is a simple weight tracker app that allows users to record their weight and track their progress over time. The app also includes #authentication to keep user data secure.
+This is a simple weight tracker app that allows users to record their weight and track their progress over time. The app also includes authentication using to keep user data secure.
 
 ## Features
 
 - Add new weight entries with date and time
-- View a graph of weight entries over time
-- Secure authentication system to protect user data
+- View a graph of weight entries over time(react-chartjs2)
+- Secure authentication system to protect user data(passport.js)
 
 ## Installation
 
@@ -18,13 +18,13 @@ Once you have these dependencies installed, you can follow these steps to instal
 
 1. Clone the repository or download the ZIP file and extract it.
 2. Open a terminal and navigate to the app directory.
-3. Run the command `npm install` or `yarn install` to install the required packages.
-4. Run the command `npm start` or `yarn start` to start the app.
+3. Run the command `npm install` to install the required packages.
+4. Run the command `npm run start` to start the app.
 5. Open a web browser and go to the URL `http://localhost:3000` to view the app.
 
 ## Usage
 
-To use the weight tracker app, simply add new weight entries as needed by clicking the "Add Weight" button and entering the weight and date/time information.
+To use the weight tracker app, simply add new weight entries as needed by clicking the "Add Weight" button and entering the weight and date/time information.Refreshing the page will allow for the chart to be updated you can view your progress over time. 
 
 
 To ensure the security of user data, the weight tracker app includes an authentication system that requires users to create an account and log in before accessing the app. Users' weight data is stored securely on the server and is only accessible to authenticated users.
